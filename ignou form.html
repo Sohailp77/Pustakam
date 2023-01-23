@@ -1,0 +1,162 @@
+<!-- enrollment no 2251373520 
+     mcsl 216   
+-->
+
+
+
+<head>
+    <script>
+    function NewInfo(){
+        var firstname = document.forms["RegForm"] ["firstname"];
+        var lastname = document.forms["RegForm"] ["lastname"];
+        var Email = document.forms["RegForm"]["Email"];
+        var Govt = document.forms["RegForm"]["Govtid"]
+        var Date = document.forms["RegForm"]["Date"];
+        var ADate = document.forms["RegForm"]["ADate"];
+        var Country = document.forms["RegForm"]["Country"];
+        var quantity = document.forms["RegForm"]["quantity"];
+        var JTP = document.forms["RegForm"]["TP"];
+
+        if (firstname.value ==""){
+        window.alert("Please enter your First Name. ");
+        firstname.value.focus();
+        return false;
+        }
+        if (lastname.value =="") {
+        window.alert("Please ent er your Last Name");
+        firstname.value.focus();
+        return false;
+        }
+        if (Email.value ==""){
+        window.alert("Please enter a valid E-mail address.");
+        email.focus();
+        return false;
+        }
+        if (Govtid.value ==""){
+        window.alert("Please Select a Valid ID proof");
+        Govtid.focus();
+        return false;
+        }
+        if(Date.value ==""){
+        window.alert("Please Select a valid Date for Arrival ");
+        Date.focus();
+        return false;
+        }
+        if(ADate.value ==""){
+        window.alert("Please Select a valid Date for Departure ");
+        ADate.focus();
+        return false;
+        }
+        if(Country.value ==""){
+        window.alert("Please Select a valid Country");
+        Country.focus();
+        return false;
+        }
+
+        if(quantity.value ==""){
+        window.alert("Please select numbe rof person");
+        quantity.focus();
+        return false;
+        }
+
+        if(JTP.value ==""){
+        window.alert("Please Select a Payment Option ");
+        JTP.focus();
+        return false;
+        }
+        window.alert("thanks for Booking");
+}
+    </script>
+<script>
+    function myfunction(){
+        alert["thanks for visiting"];
+    }
+</script>
+<style>
+    form{
+        margin:0 auto;
+        width:500px;
+    }
+    .fm{
+        background-color: rgb(255, 255, 255);
+        width: auto;
+        margin-left: 340;
+        margin-right: 340;
+        height: 590px;
+        border: 2px solid rgb(247, 247, 247);
+    }
+    body{
+        background-color: rgb(35, 36, 35);
+    }
+    .btn{
+        width: 540px;
+        margin: 4px;
+    }
+    h1{
+        background-color: rgb(255, 255, 255);
+        width: 420px;
+        margin-left: 120px;
+        border-radius: 15px;
+    }
+</style>
+</head>
+<body>
+    <div class="fm">
+        <h1 style="text-align: center;">Guest House Reservation</h1>
+        <form name="RegForm" action="null" Onsubmit="return Dtech()" method="post">
+        <label for="First Name"><b>First Name:- </b></label>
+        <input type="text" placeholder="First Name" size="46" name="firstname"><br><br>
+        <label for="Last Name"><b>Last Name:- </b></label>
+        <input type="Last Name" placeholder="Last Name" size="46" name="Ilastname"><br><br>
+        <label for="Email Address"><b>Email Address:-</b></label>
+        <input type="text" placeholder=" Email Address" size="42" id="Email"><br><br>
+        <label for="Govtid"><b>Govt. Issued- ID :-</b></label>
+        <select name="Govtid" id="Govt.Issued- ID">
+        <option value="">Select </option>
+        <option value="Adhar Card">Adhar Card </option>
+        <option value="Voter id card">Voter Id Card </option>
+        <option value="Passport">Passport</option>
+        <option value="Driving license">Driving License </option>
+    </select><br><br>
+    <label for="Date Of Arrival"><b>Date of Arrival:-</b></label>
+    <input type="Date" id="Date" name="Date"><br><br>
+    <label for="Date of Departure"><b>Date of Departure:-</b></label>
+    <input type="Date" id="ADate" name="ADate"><br><br>
+    <label for="Country"><b> Select Country:-</b></label>
+    <select name="Country" id="Country">
+    <option value="">Select</option>
+    <option value="Afghanistan">Afghanistan</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Algeria">Algeria</option>
+    <option value="Nepal">Nepal</option>
+    <option value="China">China</option>
+    <option value="Angola">Angola</option>
+    <option value="Anguilla">Anguilla</option>
+    <option value="UAE">UAE</option>
+    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Armenia">Armenia</option>
+    <option value="India">India</option>
+    </select><br><br>
+    <label for="quantity"><b>Number Of Person:-</b></label>
+    <select name="quantity" +id="quantity">
+    <option value="">Select </option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    </select><br><br>
+    <label for="Text"><b> Any Special Request:- </b></label>
+    <input type="text" placeholder="Any Request" size="37" name="text"><br><br>
+    <Label class=" "><b>Choose your payment Option:- </b></Label>
+    <input type="radio" name="JTP" id="JTP" value="Dabit"> <b>Debit </b>
+    <input type="radio" name="JTP" id="Credit" value="Credit"><b>Credit</b>
+    <p class="center">
+    <input type="submit" value="Submit" onclick="mysubmit()" name="submit" class="btn"/>
+    <input type="reset" value="Reset" class="btn"/>
+    <input type="submit" value="Cancel" onclick="myFunction()" class="btn"/>
+    </form>
+    </div>
+</body>
+</html>
